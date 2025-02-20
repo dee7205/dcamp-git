@@ -4,6 +4,7 @@ touch "filename.filetype" = create a new file
 git add filename.filetype = add to repo
 git commit -m "comment / notes" = commit to repo
 git log = see recent commits
+git diff = compare different versions
 
 git commits have 3 parts
 1. commit

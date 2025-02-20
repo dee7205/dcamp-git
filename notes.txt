@@ -1,0 +1,5 @@
+commands
+
+touch "filename.filetype" = create a new file
+git add "filename.filetype" = add to repo
+git commit -m "filename.filetype" = commit to repo

@@ -1,5 +1,25 @@
 commands
 
 touch "filename.filetype" = create a new file
-git add "filename.filetype" = add to repo
-git commit -m "filename.filetype" = commit to repo
+git add filename.filetype = add to repo
+git commit -m "comment / notes" = commit to repo
+git log = see recent commits
+
+git commits have 3 parts
+1. commit
+    - contains the metadata - author, log message,  commit time
+2. tree
+    - tracks the names and locations of files and directories in the repo
+    - mapping keys to files/directories
+3. blob
+    - binary large object
+    - may contain data of any kind
+    - compressed snapshot of a file's content
+
+GIT LOG
+- can restrict or put conditions which log you want to see
+    ex. git log "readme.md"
+        git log -2 readme.md -> two recent commits
+        git log --since='Month Day Year' -> customizing date range
+        git log --since='Month Day Year' --until='Month Day Year' -> customizing date range
+            recommended: YYYY-MM-DD, can use: "2 years ago", "yesterday"

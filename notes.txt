@@ -8,6 +8,9 @@ git diff = compare different versions
 git push -u origin main
 git push -u origin main
 git diff --staged 'filename' = specific file, compare versions from latest commit to staged
+git branch = list all branches (* is the current branch)
+git switch main = switch to main branch (change main if you want to move to another branch)
+git switch -c newbranch = create a new branch and switch to it
 
 RESTORING
 git revert 
@@ -45,3 +48,25 @@ GIT LOG
         git log --since='Month Day Year' -> customizing date range
         git log --since='Month Day Year' --until='Month Day Year' -> customizing date range
             recommended: YYYY-MM-DD, can use: "2 years ago", "yesterday"
+
+
+HOW GIT STORES DATA
+1. Branches
+    - an individual version of a repo
+    - to systematically track multiple versions of files
+    In each branch:
+        > some files might be the same
+        > others might be different
+        > some may not exist at all
+
+WHY USE BRANCHES?
+- allows multiple developers to work on a project simultaneously
+- compare the state of repo between branches easily
+- combine contents, pushing new features to a live system
+- each branch should have a specific purpose
+    1. live system
+        - works as expected
+        - default branch = 'main'
+    2. feature development
+        - might encounter issues during development and testing
+        - doesn't affect the live system
